@@ -52,18 +52,22 @@ export default function Products() {
     <section className="py-16 md:py-24 bg-cream">
       {/* Section Header */}
       <div className="text-center mb-12 md:mb-16 px-4">
-        <h2 className="font-haggler font-black text-[#FF6F98] text-4xl md:text-5xl lg:text-6xl mb-4 uppercase">
-          FIND THEIR FAVOURITES
-        </h2>
-        <p className="font-haggler font-black text-[#FF6F98] text-lg md:text-xl uppercase tracking-wide">
+        <Image
+          src="/lockups/strawberry-title.svg"
+          alt="Find Their Favourites"
+          width={400}
+          height={100}
+          className="mx-auto mb-4"
+        />
+        <p className="font-haggler font-medium text-[#FF6F98] text-lg md:text-xl uppercase tracking-wide">
           FOUR FLAVOURS. ONE SMOOTH START.
         </p>
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 px-6 md:px-10 lg:px-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 px-3 md:px-4 lg:px-6">
         {products.map((product) => (
-          <div key={product.id} className={`${product.bgColor} rounded-lg p-4 flex flex-col group cursor-pointer transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-lg hover:-translate-y-1`}>
+          <div key={product.id} className={`${product.bgColor} p-4 flex flex-col group cursor-pointer transition-all duration-300 ease-out hover:scale-[1.005] hover:shadow-sm`}>
             {/* Title SVG - centered */}
             <div className="relative h-18 md:h-20 lg:h-24 mb-3">
               <Image
@@ -92,9 +96,13 @@ export default function Products() {
 
             {/* Button */}
             <Link href={`/products/${product.id}`} className="inline-block mt-auto">
-              <button className="bg-brown text-cream font-haggler font-bold text-sm uppercase px-5 py-2.5 rounded transition-all duration-200 hover:opacity-90">
-                DISCOVER MORE
-              </button>
+              <Image
+                src="/lockups/BUTTON.svg"
+                alt="Discover More"
+                width={110}
+                height={30}
+                className="h-auto transition-opacity duration-200 hover:opacity-80"
+              />
             </Link>
           </div>
         ))}
@@ -119,6 +127,15 @@ export default function Products() {
           width={1920}
           height={600}
           className="w-full h-auto relative z-10"
+        />
+      </div>
+
+      {/* Bottom section SVG */}
+      <div className="w-screen relative left-1/2 -translate-x-1/2">
+        <img
+          src="/lockups/bottom-section.svg"
+          alt=""
+          className="w-full h-auto"
         />
       </div>
     </section>

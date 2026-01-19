@@ -1,15 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/products", label: "Products" },
-  { href: "/about", label: "About" },
-  { href: "/find-us", label: "Find Us" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "HOME" },
+  { href: "/our-cereal", label: "OUR CEREAL" },
+  { href: "/about", label: "ABOUT PETE" },
+  { href: "/find-us", label: "FIND US" },
 ];
 
 const socialLinks = [
@@ -66,127 +63,42 @@ const socialLinks = [
 ];
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setIsSubmitted(true);
-      setEmail("");
-      // Reset after 3 seconds
-      setTimeout(() => setIsSubmitted(false), 3000);
-    }
-  };
-
   return (
-    <footer className="bg-brown text-cream">
-      {/* Main Footer Content */}
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-          {/* Logo & Tagline Column */}
-          <div className="flex flex-col items-center md:items-start">
-            <Link href="/" className="mb-4 inline-block">
-              <Image
-                src="/logo.svg"
-                alt="Cheeky Pete's Logo"
-                width={120}
-                height={60}
-                className="h-auto w-28 lg:w-32"
-              />
+    <footer className="bg-cream py-12 md:py-16">
+      <div className="px-6 md:px-12 lg:px-16">
+        {/* Navigation */}
+        <nav className="flex flex-wrap justify-center gap-6 md:gap-10 mb-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="font-haggler font-bold text-[#FF6F98] text-sm md:text-base hover:text-[#A3CF43] transition-colors"
+            >
+              {link.label}
             </Link>
-            <p className="font-haggler text-lg font-semibold text-orange">
-              The Smooth Start for Little Legends
-            </p>
-            <p className="mt-4 text-center text-sm text-cream/80 md:text-left">
-              Making mornings magical, one bowl at a time!
-            </p>
-          </div>
+          ))}
+        </nav>
 
-          {/* Navigation Column */}
-          <div className="flex flex-col items-center md:items-start">
-            <h3 className="font-haggler mb-4 text-lg font-bold text-orange">
-              Explore
-            </h3>
-            <nav className="flex flex-col items-center gap-2 md:items-start">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="font-haggler text-cream/90 transition-colors hover:text-orange"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-
-          {/* Social Column */}
-          <div className="flex flex-col items-center md:items-start">
-            <h3 className="font-haggler mb-4 text-lg font-bold text-orange">
-              Follow the Fun!
-            </h3>
-            <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-cream/10 p-3 text-cream transition-all hover:bg-orange hover:text-brown hover:scale-110"
-                  aria-label={social.name}
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
-            <p className="mt-4 text-center text-sm text-cream/70 md:text-left">
-              Join the legend squad! Share your cheeky mornings with #CheekyPetes
-            </p>
-          </div>
-
-          {/* Newsletter Column */}
-          <div className="flex flex-col items-center md:items-start">
-            <h3 className="font-haggler mb-4 text-lg font-bold text-orange">
-              Stay Legendary!
-            </h3>
-            <p className="mb-4 text-center text-sm text-cream/80 md:text-left">
-              Get the latest news, exclusive offers, and fun stuff delivered to your inbox!
-            </p>
-            <form onSubmit={handleSubmit} className="w-full max-w-sm">
-              <div className="flex flex-col gap-3">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="your@email.com"
-                  className="font-haggler w-full rounded-lg border-4 border-orange bg-cream px-4 py-3 text-brown placeholder:text-brown/50 focus:border-green focus:outline-none focus:ring-2 focus:ring-green/50 transition-all"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="font-haggler w-full rounded-lg border-4 border-green bg-green px-4 py-3 font-bold text-cream transition-all hover:bg-green-light hover:border-green-light hover:scale-[1.02] active:scale-[0.98]"
-                >
-                  {isSubmitted ? "You're a Legend! 🎉" : "Join the Legend!"}
-                </button>
-              </div>
-            </form>
-          </div>
+        {/* Social Links */}
+        <div className="flex justify-center gap-6 mb-8">
+          {socialLinks.map((social) => (
+            <a
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FF6F98] hover:text-[#A3CF43] transition-colors"
+              aria-label={social.name}
+            >
+              {social.icon}
+            </a>
+          ))}
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-cream/20">
-        <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
-          <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
-            <p className="font-haggler text-center text-sm text-cream/70">
-              © 2025 Cheeky Pete's. All rights reserved.
-            </p>
-            <p className="font-haggler text-center text-sm text-cream/70">
-              Made with breakfast love for little legends everywhere.
-            </p>
-          </div>
-        </div>
+        {/* Copyright */}
+        <p className="font-haggler font-medium text-[#FF6F98] text-sm text-center">
+          © 2025 Cheeky Pete's. All rights reserved.
+        </p>
       </div>
     </footer>
   );

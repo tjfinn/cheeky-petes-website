@@ -1,9 +1,7 @@
-import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
-import About from "@/components/About";
-import Features from "@/components/Features";
+import Problem from "@/components/Problem";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,8 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Products />
-        <About />
-        <Features />
+        <Problem />
       </main>
       <Footer />
     </div>
