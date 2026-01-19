@@ -105,7 +105,7 @@ function MobileMenu({
     >
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-brown/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-[#4D0F00]/60 backdrop-blur-sm"
         onClick={onClose}
       />
 
@@ -116,7 +116,7 @@ function MobileMenu({
         }`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-brown/20 bg-brown">
+        <div className="flex items-center justify-between p-6 border-b border-[#4D0F00]/20 bg-[#4D0F00]">
           <span className="font-haggler text-cream font-bold text-xl uppercase">
             Menu
           </span>
@@ -136,7 +136,7 @@ function MobileMenu({
               key={link.href}
               href={link.href}
               onClick={onClose}
-              className="block px-4 py-3 font-haggler text-brown font-bold text-lg uppercase tracking-wide rounded-lg hover:bg-brown/10 transition-colors"
+              className="block px-4 py-3 font-haggler text-[#4D0F00] font-bold text-lg uppercase tracking-wide rounded-lg hover:bg-[#4D0F00]/10 transition-colors"
               style={{ animationDelay: `${index * 50}ms` }}
             >
               {link.label}
@@ -216,7 +216,7 @@ export default function Header() {
     <>
       <header className="w-full flex justify-center py-4 px-4">
         {/* Floating pill navigation */}
-        <div className="relative rounded-lg border border-brown-light bg-brown p-1 shadow-lg overflow-hidden">
+        <div className="relative rounded-lg border border-[#4D0F00] bg-[#4D0F00] p-1 shadow-lg overflow-hidden">
           {/* Scroll progress bar */}
           <ScrollProgress progress={scrollProgress} />
 

@@ -64,7 +64,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-cream py-12 md:py-16">
+    <footer className="bg-[#FF6F98] py-12 md:py-16">
       <div className="px-6 md:px-12 lg:px-16">
         {/* Navigation */}
         <nav className="flex flex-wrap justify-center gap-6 md:gap-10 mb-8">
@@ -72,7 +72,7 @@ export default function Footer() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-haggler font-bold text-[#FF6F98] text-sm md:text-base hover:text-[#A3CF43] transition-colors"
+              className="font-haggler font-bold text-cream text-sm md:text-base hover:text-[#A3CF43] transition-colors"
             >
               {link.label}
             </Link>
@@ -87,7 +87,7 @@ export default function Footer() {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#FF6F98] hover:text-[#A3CF43] transition-colors"
+              className="text-cream hover:text-[#A3CF43] transition-colors"
               aria-label={social.name}
             >
               {social.icon}
@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p className="font-haggler font-medium text-[#FF6F98] text-sm text-center">
+        <p className="font-haggler font-medium text-cream text-sm text-center">
           © 2025 Cheeky Pete's. All rights reserved.
         </p>
       </div>

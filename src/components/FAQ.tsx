@@ -12,7 +12,7 @@ const faqItems = [
 
 export default function FAQ() {
   return (
-    <section id="faq" className="bg-brown py-16 md:py-24 px-6 md:px-12 lg:px-16 scroll-mt-20">
+    <section id="faq" className="bg-[#4D0F00] py-16 md:py-24 px-6 md:px-12 lg:px-16 scroll-mt-20">
       {/* Title */}
       <div className="text-center mb-12 md:mb-16">
         <h2 className="font-haggler text-cream text-4xl md:text-5xl lg:text-6xl font-bold mb-2">

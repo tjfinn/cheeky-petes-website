@@ -58,7 +58,7 @@ function FAQAccordionItem({ item, isOpen, onToggle }: {
         <span className="font-haggler text-brown text-lg md:text-xl font-bold uppercase pr-4">
           {item.question}
         </span>
-        <span className={`flex-shrink-0 w-8 h-8 rounded-full bg-brown flex items-center justify-center transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+        <span className={`flex-shrink-0 w-8 h-8 rounded-full bg-[#4D0F00] flex items-center justify-center transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
           <svg
             className="w-4 h-4 text-cream"
             fill="none"
@@ -90,7 +90,7 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-cream">
       {/* Header */}
-      <div className="bg-brown py-16 md:py-24 px-6 md:px-12 lg:px-16">
+      <div className="bg-[#4D0F00] py-16 md:py-24 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="font-haggler text-cream text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             <span className="font-medium">QUICK</span> QUESTIONS

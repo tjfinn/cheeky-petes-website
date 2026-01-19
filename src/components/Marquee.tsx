@@ -11,7 +11,7 @@ export default function Marquee() {
   const repeatedFeatures = [...features, ...features, ...features, ...features, ...features, ...features];
 
   return (
-    <section className="bg-[#4A2C2A] py-6 md:py-8 overflow-hidden">
+    <section className="bg-[#4D0F00] py-6 md:py-8 overflow-hidden">
       <div className="relative">
         <div className="flex animate-marquee whitespace-nowrap">
           {repeatedFeatures.map((feature, index) => (
