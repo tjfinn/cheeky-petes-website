@@ -1,26 +1,134 @@
 @import "tailwindcss";
 
+/* Custom Font Definitions */
+@font-face {
+  font-family: 'F37 Haggler';
+  src: url('/fonts/F37HagglerTrial-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'F37 Haggler';
+  src: url('/fonts/F37HagglerTrial-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'F37 Haggler';
+  src: url('/fonts/F37HagglerTrial-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'F37 Haggler';
+  src: url('/fonts/F37HagglerTrial-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'F37 Haggler';
+  src: url('/fonts/F37HagglerTrial-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'F37 Haggler';
+  src: url('/fonts/F37HagglerTrial-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Brand Colors as CSS Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFF8E7;
+  --foreground: #3D2914;
+
+  /* Brand Colors */
+  --pink: #E8B4B8;
+  --pink-dark: #D4A5A5;
+  --green: #7CB342;
+  --green-light: #8BC34A;
+  --purple: #9575CD;
+  --purple-light: #B39DDB;
+  --orange: #FF9800;
+  --orange-dark: #F57C00;
+  --cream: #FFF8E7;
+  --cream-dark: #F5E6C8;
+  --blue: #5DADE2;
+  --blue-light: #85C1E9;
+  --brown: #5D4037;
+  --brown-light: #795548;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-haggler: 'F37 Haggler', system-ui, sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Brand Colors */
+  --color-pink: var(--pink);
+  --color-pink-dark: var(--pink-dark);
+  --color-green: var(--green);
+  --color-green-light: var(--green-light);
+  --color-purple: var(--purple);
+  --color-purple-light: var(--purple-light);
+  --color-orange: var(--orange);
+  --color-orange-dark: var(--orange-dark);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-blue: var(--blue);
+  --color-blue-light: var(--blue-light);
+  --color-brown: var(--brown);
+  --color-brown-light: var(--brown-light);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'F37 Haggler', system-ui, sans-serif;
+}
+
+/* Smooth scrolling - but not breaking fixed positioning */
+html, body {
+  transform: none !important;
+  perspective: none !important;
+  filter: none !important;
+  contain: none !important;
+}
+
+/* Custom selection colors */
+::selection {
+  background-color: var(--orange);
+  color: white;
+}
+
+/* Font utility class */
+.font-haggler {
+  font-family: 'F37 Haggler', system-ui, sans-serif;
+}
+
+/* All headings use the brand font in uppercase */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'F37 Haggler', system-ui, sans-serif;
+  text-transform: uppercase;
+}
+
+/* Fixed announcement bar */
+#announcement-bar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 99999 !important;
 }
