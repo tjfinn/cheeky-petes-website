@@ -1,7 +1,11 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
+import Features from "@/components/Features";
 import Problem from "@/components/Problem";
+import Marquee from "@/components/Marquee";
+import MeetPete from "@/components/MeetPete";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,7 +19,11 @@ export default function Home() {
       <main>
         <Hero />
         <Products />
+        <Features />
         <Problem />
+        <Marquee />
+        <MeetPete />
+        <FAQ />
       </main>
       <Footer />
     </div>

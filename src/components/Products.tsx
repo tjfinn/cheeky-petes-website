@@ -49,7 +49,7 @@ const products: Product[] = [
 
 export default function Products() {
   return (
-    <section className="py-16 md:py-24 bg-cream">
+    <section id="products" className="pt-16 md:pt-24 bg-cream scroll-mt-20">
       {/* Section Header */}
       <div className="text-center mb-12 md:mb-16 px-4">
         <Image
@@ -127,15 +127,6 @@ export default function Products() {
           width={1920}
           height={600}
           className="w-full h-auto relative z-10"
-        />
-      </div>
-
-      {/* Bottom section SVG */}
-      <div className="w-screen relative left-1/2 -translate-x-1/2">
-        <img
-          src="/lockups/bottom-section.svg"
-          alt=""
-          className="w-full h-auto"
         />
       </div>
     </section>
