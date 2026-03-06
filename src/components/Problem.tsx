@@ -9,8 +9,8 @@ export default function Problem() {
       {/* First Row - Text Left, Image Right */}
       <div className="relative min-h-[600px] lg:min-h-[700px]">
         {/* Right - Product Video - absolute positioned to top right */}
-        <div className="hidden lg:block absolute top-0 right-0 w-1/2 h-full">
-          <div className="w-full h-full overflow-hidden">
+        <div className="hidden lg:block absolute top-0 right-0 w-1/2 h-full pr-6 md:pr-12 lg:pr-16">
+          <div className="w-full h-full overflow-hidden rounded-lg">
             <video
               autoPlay
               loop
