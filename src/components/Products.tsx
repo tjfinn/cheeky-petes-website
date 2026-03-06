@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import AnimateOnScroll from './AnimateOnScroll';
 
 interface Product {
@@ -97,15 +96,14 @@ export default function Products() {
             </p>
 
             {/* Button */}
-            <Link href={`/products/${product.id}`} className="inline-block mt-auto">
-              <Image
-                src="/lockups/BUTTON.svg"
-                alt="Discover More"
-                width={110}
-                height={30}
-                className="h-auto transition-opacity duration-200 hover:opacity-80"
-              />
-            </Link>
+            <a
+              href="https://www.amazon.co.uk/s?k=cheeky+petes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-auto font-haggler font-bold text-cream text-sm uppercase tracking-wide bg-[#551405] px-6 py-3 hover:opacity-80 transition-opacity duration-200"
+            >
+              BUY NOW
+            </a>
             </div>
           </AnimateOnScroll>
         ))}

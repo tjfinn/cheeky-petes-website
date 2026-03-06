@@ -33,7 +33,7 @@ export default function Hero() {
 
       {/* CTA Buttons - Bottom Left */}
       <div className="absolute left-[-4px] md:left-3 lg:left-7 bottom-[22px] md:bottom-[38px] z-20 flex flex-col gap-2">
-        <Link href="/products" className="inline-block transition-transform duration-200 hover:scale-105 animate-slide-up animation-delay-300">
+        <a href="#products" className="inline-block transition-transform duration-200 hover:scale-105 animate-slide-up animation-delay-300">
           <Image
             src="/lockups/Frame 33040.svg"
             alt="Our Cereals"
@@ -41,8 +41,8 @@ export default function Hero() {
             height={63}
             className="w-28 md:w-36 lg:w-40 h-auto"
           />
-        </Link>
-        <Link href="/about" className="inline-block transition-transform duration-200 hover:scale-105 animate-slide-up animation-delay-500">
+        </a>
+        <a href="#about" className="inline-block transition-transform duration-200 hover:scale-105 animate-slide-up animation-delay-500">
           <Image
             src="/lockups/Frame 33041.svg"
             alt="Why's It Different"
@@ -50,7 +50,7 @@ export default function Hero() {
             height={75}
             className="w-36 md:w-44 lg:w-48 h-auto"
           />
-        </Link>
+        </a>
       </div>
 
       {/* Green bar at bottom */}
