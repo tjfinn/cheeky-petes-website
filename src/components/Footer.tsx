@@ -136,6 +136,19 @@ export default function Footer() {
           ))}
         </nav>
 
+        {/* Built By */}
+        <p className="font-haggler font-bold text-cream text-sm text-center mb-3">
+          BUILT BY{" "}
+          <a
+            href="https://www.themetabolicgroup.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#A3CF43] transition-colors underline"
+          >
+            THE METABOLIC GROUP
+          </a>
+        </p>
+
         {/* Copyright */}
         <p className="font-haggler font-medium text-cream text-sm text-center">
           © 2025 Cheeky Pete&apos;s. All rights reserved.
