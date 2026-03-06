@@ -83,7 +83,7 @@ export default function Problem() {
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up" delay={200}>
             <p className="font-semibold text-[#FF6F98] text-lg md:text-xl leading-tight max-w-md">
-              It often comes with an even bigger crash. Not great for focus. Not great for moods. Definitely not great at 8am.
+              The problem isn&apos;t cereal.<br />It&apos;s sneaky cereal.<br /><br />The kind that looks healthy. Sounds wholesome. But is quietly packed with sugar and refined carbs.<br /><br />It promises energy… then vanishes when kids need it most.
             </p>
           </AnimateOnScroll>
         </div>
