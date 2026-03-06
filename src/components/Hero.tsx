@@ -20,7 +20,7 @@ export default function Hero() {
       </div>
 
       {/* Logo - Left Side, top aligned with menu */}
-      <Link href="/" className="absolute left-[-14px] md:left-[2px] lg:left-[18px] top-[-50px] md:top-[-42px] z-20 transition-transform duration-300 hover:scale-105 animate-slide-down">
+      <Link href="/" className="absolute left-[2px] md:left-[2px] lg:left-[18px] top-[-10px] md:top-[-42px] z-20 transition-transform duration-300 hover:scale-105 animate-slide-down">
         <div className="w-32 h-48 md:w-40 md:h-60 lg:w-48 lg:h-72 relative">
           <Image
             src="/logo.svg"
@@ -32,7 +32,7 @@ export default function Hero() {
       </Link>
 
       {/* CTA Buttons - Bottom Left */}
-      <div className="absolute left-[-4px] md:left-3 lg:left-7 bottom-[22px] md:bottom-[38px] z-20 flex flex-col gap-2">
+      <div className="absolute left-[4px] md:left-3 lg:left-7 bottom-[50px] md:bottom-[38px] z-20 flex flex-col gap-2">
         <a href="#products" className="inline-block transition-transform duration-200 hover:scale-105 animate-slide-up animation-delay-300">
           <Image
             src="/lockups/Frame 33040.svg"
@@ -55,13 +55,18 @@ export default function Hero() {
 
       {/* Green bar at bottom */}
       <div className="absolute bottom-0 left-0 right-0 z-10">
-        <Image
-          src="/lockups/greenbar.svg"
-          alt=""
-          width={1920}
-          height={100}
-          className="w-full h-auto"
-        />
+        <div className="bg-[#A3CF43] py-3 md:py-0">
+          <Image
+            src="/lockups/greenbar.svg"
+            alt="The Smooth Start for Little Legends"
+            width={1920}
+            height={100}
+            className="hidden md:block w-full h-auto"
+          />
+          <p className="md:hidden font-haggler text-white text-center text-lg font-bold uppercase tracking-wide px-4">
+            The Smooth Start for Little Legends
+          </p>
+        </div>
       </div>
     </section>
   );
