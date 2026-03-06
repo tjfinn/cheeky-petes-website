@@ -6,20 +6,21 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
-      {/* Full-screen background image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/__Frame-720.png"
-          alt="Cheeky Pete's Cereal Collection"
-          fill
-          className="object-cover object-center"
-          priority
-          quality={100}
-        />
+      {/* Full-screen background video */}
+      <div className="absolute inset-0 animate-fade-in">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/images/hero-video.mp4" type="video/mp4" />
+        </video>
       </div>
 
       {/* Logo - Left Side, top aligned with menu */}
-      <Link href="/" className="absolute left-[-14px] md:left-[2px] lg:left-[18px] top-[-50px] md:top-[-42px] z-20 transition-transform duration-300 hover:scale-105">
+      <Link href="/" className="absolute left-[-14px] md:left-[2px] lg:left-[18px] top-[-50px] md:top-[-42px] z-20 transition-transform duration-300 hover:scale-105 animate-slide-down">
         <div className="w-32 h-48 md:w-40 md:h-60 lg:w-48 lg:h-72 relative">
           <Image
             src="/logo.svg"
@@ -32,7 +33,7 @@ export default function Hero() {
 
       {/* CTA Buttons - Bottom Left */}
       <div className="absolute left-[-4px] md:left-3 lg:left-7 bottom-[22px] md:bottom-[38px] z-20 flex flex-col gap-2">
-        <Link href="/products" className="inline-block transition-transform duration-200 hover:scale-105">
+        <Link href="/products" className="inline-block transition-transform duration-200 hover:scale-105 animate-slide-up animation-delay-300">
           <Image
             src="/lockups/Frame 33040.svg"
             alt="Our Cereals"
@@ -41,7 +42,7 @@ export default function Hero() {
             className="w-28 md:w-36 lg:w-40 h-auto"
           />
         </Link>
-        <Link href="/about" className="inline-block transition-transform duration-200 hover:scale-105">
+        <Link href="/about" className="inline-block transition-transform duration-200 hover:scale-105 animate-slide-up animation-delay-500">
           <Image
             src="/lockups/Frame 33041.svg"
             alt="Why's It Different"

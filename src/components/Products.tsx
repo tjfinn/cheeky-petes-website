@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import AnimateOnScroll from './AnimateOnScroll';
 
 interface Product {
   id: number;
@@ -51,7 +52,7 @@ export default function Products() {
   return (
     <section id="products" className="pt-16 md:pt-24 bg-cream scroll-mt-20">
       {/* Section Header */}
-      <div className="text-center mb-12 md:mb-16 px-4">
+      <AnimateOnScroll animation="fade-up" className="text-center mb-12 md:mb-16 px-4">
         <Image
           src="/lockups/strawberry-title.svg"
           alt="Find Their Favourites"
@@ -62,12 +63,13 @@ export default function Products() {
         <p className="font-haggler font-medium text-[#FF6F98] text-lg md:text-xl uppercase tracking-wide">
           FOUR FLAVOURS. ONE SMOOTH START.
         </p>
-      </div>
+      </AnimateOnScroll>
 
       {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 px-3 md:px-4 lg:px-6">
-        {products.map((product) => (
-          <div key={product.id} className={`${product.bgColor} p-4 flex flex-col group cursor-pointer transition-all duration-300 ease-out hover:scale-[1.005] hover:shadow-sm`}>
+        {products.map((product, index) => (
+          <AnimateOnScroll key={product.id} animation="fade-up" delay={index * 100}>
+            <div className={`${product.bgColor} p-4 flex flex-col group cursor-pointer transition-all duration-300 ease-out hover:scale-[1.005] hover:shadow-sm h-full`}>
             {/* Title SVG - centered */}
             <div className="relative h-18 md:h-20 lg:h-24 mb-3">
               <Image
@@ -104,7 +106,8 @@ export default function Products() {
                 className="h-auto transition-opacity duration-200 hover:opacity-80"
               />
             </Link>
-          </div>
+            </div>
+          </AnimateOnScroll>
         ))}
       </div>
 

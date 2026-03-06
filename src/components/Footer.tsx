@@ -6,7 +6,13 @@ const navLinks = [
   { href: "/", label: "HOME" },
   { href: "/our-cereal", label: "OUR CEREAL" },
   { href: "/about", label: "ABOUT PETE" },
-  { href: "/find-us", label: "FIND US" },
+  { href: "/faq", label: "FAQ" },
+];
+
+const legalLinks = [
+  { href: "/privacy", label: "PRIVACY POLICY" },
+  { href: "/cookies", label: "COOKIES" },
+  { href: "/terms", label: "TERMS" },
 ];
 
 const socialLinks = [
@@ -65,9 +71,31 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-[#FF6F98] py-12 md:py-16">
-      <div className="px-6 md:px-12 lg:px-16">
+      <div className="px-6 md:px-12 lg:px-16 max-w-5xl mx-auto">
+        {/* Say Howdy */}
+        <div className="text-center mb-10">
+          <h2 className="font-haggler text-cream text-3xl md:text-4xl font-bold mb-3">
+            SAY HOWDY!
+          </h2>
+          <p className="text-cream text-base md:text-lg mb-4">
+            Questions, thoughts, or breakfast feedback? We&apos;re all ears.
+          </p>
+          <div className="flex flex-col items-center gap-1 mb-2">
+            <a
+              href="mailto:howdy@cheekypetes.com"
+              className="font-haggler text-cream font-bold hover:text-[#A3CF43] transition-colors"
+            >
+              howdy@cheekypetes.com
+            </a>
+            <span className="text-cream font-haggler font-bold">@cheekypetes</span>
+          </div>
+          <p className="text-cream/70 text-sm italic">
+            Pete reads everything. Eventually.
+          </p>
+        </div>
+
         {/* Navigation */}
-        <nav className="flex flex-wrap justify-center gap-6 md:gap-10 mb-8">
+        <nav className="flex flex-wrap justify-center gap-6 md:gap-10 mb-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -80,7 +108,7 @@ export default function Footer() {
         </nav>
 
         {/* Social Links */}
-        <div className="flex justify-center gap-6 mb-8">
+        <div className="flex justify-center gap-6 mb-6">
           {socialLinks.map((social) => (
             <a
               key={social.name}
@@ -95,9 +123,22 @@ export default function Footer() {
           ))}
         </div>
 
+        {/* Legal Links */}
+        <nav className="flex flex-wrap justify-center gap-4 md:gap-8 mb-6">
+          {legalLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-cream/70 text-xs md:text-sm hover:text-cream transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
         {/* Copyright */}
         <p className="font-haggler font-medium text-cream text-sm text-center">
-          © 2025 Cheeky Pete's. All rights reserved.
+          © 2025 Cheeky Pete&apos;s. All rights reserved.
         </p>
       </div>
     </footer>

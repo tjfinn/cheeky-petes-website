@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import AnimateOnScroll from './AnimateOnScroll';
 
 export default function Problem() {
   return (
@@ -27,16 +28,20 @@ export default function Problem() {
 
         {/* Left - Title and Text */}
         <div className="relative z-10 flex flex-col justify-center px-6 md:px-12 lg:px-16 py-16 md:py-24 lg:w-1/2">
-          <Image
-            src="/lockups/Frame 33046.svg"
-            alt="Breakfast Has A Problem"
-            width={464}
-            height={171}
-            className="mb-6"
-          />
-          <p className="font-semibold text-[#FF6F98] text-lg md:text-xl leading-tight max-w-md">
-            Most kids' breakfast cereal hasn't really changed in decades. It's still built around sugar and fast carbs and seed oils. The kind that taste great for five minutes, then leave kids hungry, wriggly, and asking for snacks before the school bell rings.
-          </p>
+          <AnimateOnScroll animation="slide-left">
+            <Image
+              src="/lockups/Frame 33046.svg"
+              alt="Breakfast Has A Problem"
+              width={464}
+              height={171}
+              className="mb-6"
+            />
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <p className="font-semibold text-[#FF6F98] text-lg md:text-xl leading-tight max-w-md">
+              Most kids' breakfast cereal hasn't really changed in decades. It's still built around sugar and fast carbs and seed oils. The kind that taste great for five minutes, then leave kids hungry, wriggly, and asking for snacks before the school bell rings.
+            </p>
+          </AnimateOnScroll>
         </div>
       </div>
 
@@ -55,16 +60,20 @@ export default function Problem() {
 
         {/* Right - Title and Text */}
         <div className="flex flex-col justify-center px-6 md:px-12 lg:px-16 py-16 md:py-24">
-          <Image
-            src="/lockups/Frame 33047.svg"
-            alt="That Big Burst of Energy First Thing in the Morning?"
-            width={557}
-            height={222}
-            className="mb-6"
-          />
-          <p className="font-semibold text-[#FF6F98] text-lg md:text-xl leading-tight max-w-md">
-            It often comes with an even bigger crash. Not great for focus. Not great for moods. Definitely not great at 8am.
-          </p>
+          <AnimateOnScroll animation="slide-right">
+            <Image
+              src="/lockups/Frame 33047.svg"
+              alt="That Big Burst of Energy First Thing in the Morning?"
+              width={557}
+              height={222}
+              className="mb-6"
+            />
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <p className="font-semibold text-[#FF6F98] text-lg md:text-xl leading-tight max-w-md">
+              It often comes with an even bigger crash. Not great for focus. Not great for moods. Definitely not great at 8am.
+            </p>
+          </AnimateOnScroll>
         </div>
       </div>
 

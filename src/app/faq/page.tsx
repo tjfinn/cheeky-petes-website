@@ -10,36 +10,24 @@ interface FAQItem {
 
 const faqItems: FAQItem[] = [
   {
+    question: "WHAT AGE IS CHEEKY PETE'S FOR?",
+    answer: "Cheeky Pete's is designed for little legends aged 4–10, but older fans are welcome too.",
+  },
+  {
     question: "IS CHEEKY PETE'S LOW SUGAR?",
-    answer: "Yes! Cheeky Pete's contains no added sugar. We use natural ingredients to create a delicious taste without the sugar spike. Each serving has less than 1g of naturally occurring sugars.",
-  },
-  {
-    question: "IS IT SUITABLE FOR SCHOOL?",
-    answer: "Absolutely! Cheeky Pete's is designed to give kids sustained energy throughout the morning. It's perfect for school days - no sugar crashes, just steady focus and energy until lunchtime.",
-  },
-  {
-    question: "WHAT AGE IS IT FOR?",
-    answer: "Cheeky Pete's is perfect for kids aged 3 and up. The texture is easy for little ones to manage, and the nutrition profile supports growing bodies at every stage.",
+    answer: "Yes. Cheeky Pete's has no added sugar and is sweetened using fibre, not sugar.",
   },
   {
     question: 'WHAT MAKES IT A "SMOOTH START"?',
-    answer: "Unlike sugary cereals that cause energy spikes and crashes, Cheeky Pete's provides balanced nutrition with 16g of protein and high fibre. This means steady energy release - no hyperactivity followed by meltdowns!",
+    answer: "It's high in protein and fibre, paired with coconut oil containing natural MCTs — helping support steady energy throughout the morning without the spike and crash.",
   },
   {
-    question: "WHAT ARE THE MAIN INGREDIENTS?",
-    answer: "Cheeky Pete's is made with wholesome ingredients including oats, plant-based protein, natural flavours, and no artificial colours or preservatives. We never use seed oils or artificial sweeteners.",
-  },
-  {
-    question: "IS IT VEGAN/VEGETARIAN FRIENDLY?",
-    answer: "Yes! Cheeky Pete's is 100% vegan, vegetarian, halal, and kosher friendly. We believe every child deserves a great start to their day.",
-  },
-  {
-    question: "HOW DO I PREPARE IT?",
-    answer: "Simply add your favourite milk (dairy or plant-based) and enjoy! You can also add fresh fruit, nuts, or seeds for extra nutrition. It's ready in seconds - perfect for busy mornings.",
+    question: "IS IT SUITABLE FOR SCHOOL?",
+    answer: "Yes. Please note our Peanut Butter flavour contains peanuts, so always check individual school policies.",
   },
   {
     question: "WHERE CAN I BUY IT?",
-    answer: "Cheeky Pete's is available online through our shop and at select retailers. Sign up to our newsletter to be the first to know about new stockists and special offers!",
+    answer: "Cheeky Pete's is available on Amazon.",
   },
 ];
 

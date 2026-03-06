@@ -21,7 +21,7 @@ interface ScrollProgressProps {
 const navLinks: NavLink[] = [
   { label: "OUR CEREAL", href: "/#products" },
   { label: "ABOUT PETE", href: "/#about" },
-  { label: "FAQ", href: "/#faq" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
