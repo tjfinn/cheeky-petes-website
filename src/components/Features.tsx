@@ -21,14 +21,14 @@ export default function Features() {
         {repeatedFeatures.map((feature, index) => (
           <div
             key={index}
-            className="bg-[#FF6F98] px-12 py-8 md:px-16 md:py-10 flex items-center justify-center flex-shrink-0 mx-2"
+            className="bg-[#FF6F98] px-6 py-4 md:px-16 md:py-10 flex items-center justify-center flex-shrink-0 mx-1 md:mx-2"
           >
             <Image
               src={feature.svg}
               alt=""
               width={400}
               height={160}
-              className="h-36 md:h-48 w-auto"
+              className="h-20 sm:h-28 md:h-48 w-auto"
             />
           </div>
         ))}

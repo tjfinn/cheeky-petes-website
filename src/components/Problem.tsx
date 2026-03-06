@@ -7,7 +7,7 @@ export default function Problem() {
   return (
     <section id="about" className="bg-cream relative scroll-mt-20">
       {/* First Row - Text Left, Image Right */}
-      <div className="relative min-h-[600px] lg:min-h-[700px]">
+      <div className="relative lg:min-h-[700px]">
         {/* Right - Product Video - absolute positioned to top right */}
         <div className="hidden lg:block absolute top-0 right-0 w-1/2 h-full pr-6 md:pr-12 lg:pr-16">
           <div className="w-full h-full overflow-hidden rounded-lg">
@@ -60,7 +60,7 @@ export default function Problem() {
       {/* Second Row - Image Left, Text Right */}
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Left - Hedgehog Image */}
-        <div className="relative flex items-end justify-center px-6 md:px-12 -mt-32 lg:-mt-48">
+        <div className="relative flex items-end justify-center px-6 md:px-12 lg:-mt-48">
           <Image
             src="/images/Frame 33041.png"
             alt="Pete the hedgehog fishing"

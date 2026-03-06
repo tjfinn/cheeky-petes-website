@@ -65,12 +65,12 @@ export default function Products() {
       </AnimateOnScroll>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 px-3 md:px-4 lg:px-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 px-3 md:px-4 lg:px-6">
         {products.map((product, index) => (
           <AnimateOnScroll key={product.id} animation="fade-up" delay={index * 100}>
-            <div className={`${product.bgColor} p-4 flex flex-col group cursor-pointer transition-all duration-300 ease-out hover:scale-[1.005] hover:shadow-sm h-full`}>
+            <div className={`${product.bgColor} p-3 sm:p-4 flex flex-col group cursor-pointer transition-all duration-300 ease-out hover:scale-[1.005] hover:shadow-sm h-full`}>
             {/* Title SVG - centered */}
-            <div className="relative h-18 md:h-20 lg:h-24 mb-3">
+            <div className="relative h-12 sm:h-18 md:h-20 lg:h-24 mb-3">
               <Image
                 src={product.titleSvg}
                 alt={product.name}
@@ -91,7 +91,7 @@ export default function Products() {
             </div>
 
             {/* Description */}
-            <p className="font-haggler font-bold text-brown text-sm uppercase leading-snug mb-3">
+            <p className="font-haggler font-bold text-brown text-xs sm:text-sm uppercase leading-snug mb-3">
               {product.description}
             </p>
 
