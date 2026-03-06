@@ -8,22 +8,34 @@ export default function Problem() {
     <section id="about" className="bg-cream relative scroll-mt-20">
       {/* First Row - Text Left, Image Right */}
       <div className="relative min-h-[600px] lg:min-h-[700px]">
-        {/* Right - Product Image - absolute positioned to top right */}
+        {/* Right - Product Video - absolute positioned to top right */}
         <div className="hidden lg:block absolute top-0 right-0 w-1/2 h-full">
-          <img
-            src="/images/Frame 33040.png"
-            alt="Cheeky Pete's cereal with bowl and milk"
-            className="w-full h-full object-cover object-top"
-          />
+          <div className="w-full h-full overflow-hidden">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover object-center"
+              style={{ aspectRatio: '1 / 1' }}
+            >
+              <source src="/images/problem-video.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
 
-        {/* Mobile image */}
-        <div className="lg:hidden w-full">
-          <img
-            src="/images/Frame 33040.png"
-            alt="Cheeky Pete's cereal with bowl and milk"
-            className="w-full h-auto"
-          />
+        {/* Mobile video */}
+        <div className="lg:hidden w-full overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full object-cover object-center"
+            style={{ aspectRatio: '1 / 1' }}
+          >
+            <source src="/images/problem-video.mp4" type="video/mp4" />
+          </video>
         </div>
 
         {/* Left - Title and Text */}
