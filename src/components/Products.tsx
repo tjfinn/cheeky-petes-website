@@ -100,9 +100,15 @@ export default function Products() {
               href="https://www.amazon.co.uk/s?k=cheeky+petes"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-auto font-haggler font-bold text-cream text-sm uppercase tracking-wide bg-[#551405] px-6 py-3 hover:opacity-80 transition-opacity duration-200"
+              className="inline-block mt-auto"
             >
-              BUY NOW
+              <Image
+                src="/lockups/BUTTON.svg"
+                alt="Buy Now"
+                width={110}
+                height={30}
+                className="h-auto transition-opacity duration-200 hover:opacity-80"
+              />
             </a>
             </div>
           </AnimateOnScroll>
