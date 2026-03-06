@@ -13,7 +13,7 @@ export default function Hero() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 w-full h-full object-cover object-right md:object-center"
         >
           <source src="/images/hero-video.mp4" type="video/mp4" />
         </video>
